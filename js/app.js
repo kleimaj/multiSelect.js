@@ -1,7 +1,14 @@
 console.log('🌴');
 const el = document.querySelector('.multi');
-const opt = [];
-const addOpt = (value) => {
-  opt.push(value);
-};
-el.addEventListener('change', (e) => addOpt(e.target.value));
+// array of options
+const opt = el.options;
+
+const container = document.createElement('div');
+// set innerText to default value
+container.innerText = opt[0].innerText;
+console.log(container);
+// insert container
+// el.insertAdjacentHTML('beforebegin', container);
+document.querySelector('#root').appendChild(container);
+// remove select field
+el.parentElement.removeChild(el);
