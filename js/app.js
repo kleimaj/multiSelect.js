@@ -10,5 +10,9 @@ console.log(container);
 // insert container
 // el.insertAdjacentHTML('beforebegin', container);
 document.querySelector('#root').appendChild(container);
+// create container
+const dropdown = document.createElement('div');
+// append dropdown to container
+container.appendChild(dropdown)
 // remove select field
 el.parentElement.removeChild(el);
