@@ -2,7 +2,7 @@ console.log('🌴');
 const el = document.querySelector('.multi');
 // array of options
 const { options: opt } = el;
-console.log(opt);
+
 const container = document.createElement('div');
 // set innerText to default value
 container.innerText = opt[0].innerText;
