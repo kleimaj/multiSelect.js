@@ -1,3 +1,10 @@
+const updateContainer = (display, selected, opt) => {
+    if (selected.length > 0) {
+        display.value = selected.join(', ');
+    } else {
+        display.value = opt[0].innerText;
+    }
+}
 console.log('🌴');
 const el = document.querySelector('.multi');
 // stores values of dropdown
@@ -5,11 +12,20 @@ const selected = [];
 // array of options
 const { options: opt } = el;
 
+// create container
 const container = document.createElement('div');
 container.classList.add('container')
+
+// create display
+const display = document.createElement('input');
+display.classList.add('display');
+display.setAttribute('readonly','readonly');
 // set innerText to default value
-container.innerText = opt[0].innerText;
-console.log(container);
+display.value = opt[0].innerText
+// append display to container
+container.appendChild(display);
+// container.innerText = opt[0].innerText;
+// console.log(container);
 // insert container
 // el.insertAdjacentHTML('beforebegin', container);
 document.querySelector('#root').appendChild(container);
@@ -26,9 +42,13 @@ for (let i = 1; i < opt.length; i++) {
     li.classList.add('item');
     li.innerText=opt[i].innerText
     li.addEventListener('click', e => {
-        selected.push(e.target.innerText);
-        e.target.parentElement.removeChild(e.target);
-        
+        if (selected.includes(e.target.innerText)) {
+            selected.splice(selected.indexOf(e.target.innerText), 1);
+        }else {
+            selected.push(e.target.innerText);
+        }
+        // e.target.parentElement.removeChild(e.target);
+        updateContainer(display, selected, opt);
     })
     list.appendChild(li);
 }
