@@ -4,6 +4,9 @@
     align-items: center;
     flex-direction: column;
 }
+.hidden {
+    display: none;
+}
 h1 {
     font-family: sans-serif;
 }
