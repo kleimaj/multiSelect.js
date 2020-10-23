@@ -5,7 +5,7 @@ const updateContainer = (display, selected, opt) => {
         display.value = opt[0].innerText;
     }
 }
-console.log('🌴');
+// console.log('🌴');
 const el = document.querySelector('.multi');
 // stores values of dropdown
 const selected = [];
@@ -44,8 +44,10 @@ for (let i = 1; i < opt.length; i++) {
     li.addEventListener('click', e => {
         if (selected.includes(e.target.innerText)) {
             selected.splice(selected.indexOf(e.target.innerText), 1);
+            e.target.classList.remove('selected');
         }else {
             selected.push(e.target.innerText);
+            e.target.classList.add('selected');
         }
         // e.target.parentElement.removeChild(e.target);
         updateContainer(display, selected, opt);
