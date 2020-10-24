@@ -1,10 +1,10 @@
-const updateContainer = (display, selected, opt) => {
+const updateContainer = (display,inner, selected, opt) => {
     if (selected.length > 0) {
         display.value = selected.join(', ');
-        display.innerText = selected.join(', ');
+        inner.innerText = selected.join(', ');
     } else {
         display.value = "";
-        display.innerText = opt[0].innerText;
+        inner.innerText = opt[0].innerText;
     }
 }
 // console.log('🌴');
@@ -22,11 +22,17 @@ container.classList.add('container')
 const display = document.createElement('button');
 display.classList.add('display');
 
+// create inner (displays the values)
+const inner = document.createElement('div');
+inner.classList.add('inner');
+
 // set innerText to default value
-display.innerText = opt[0].innerText
+// display.innerText = opt[0].innerText
+inner.innerText = opt[0].innerText
 display.value = ""
 // append display to container
 container.appendChild(display);
+display.appendChild(inner);
 // container.innerText = opt[0].innerText;
 // console.log(container);
 // insert container
@@ -53,7 +59,7 @@ for (let i = 1; i < opt.length; i++) {
             e.target.classList.add('selected');
         }
         // e.target.parentElement.removeChild(e.target);
-        updateContainer(display, selected, opt);
+        updateContainer(display, inner, selected, opt);
     })
     list.appendChild(li);
 }
