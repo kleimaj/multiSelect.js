@@ -8,7 +8,6 @@
     display: none;
 }
 .container {
-    /* min-width: 200px; */
     width: 220px;
     padding: .375rem .75rem;
 }
@@ -26,6 +25,9 @@
     position: relative;
     text-align: left;
     white-space: nowrap;
+}
+.dropdown-toggle {
+    background-color: #dae0e5;
 }
 .display::active {
     outline: 1px solid blue;
