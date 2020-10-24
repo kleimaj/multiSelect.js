@@ -59,7 +59,7 @@ for (let i = 1; i < opt.length; i++) {
 }
 // add event listener to window
 document.addEventListener('click', e => {
-    display.classList.toggle('dropdown-toggle');
+    display.classList.remove('dropdown-toggle');
     dropdown.classList.add('hidden');
 })
 // add event listener to container to show / hide dropdown
