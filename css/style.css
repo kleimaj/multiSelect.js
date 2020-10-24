@@ -63,7 +63,24 @@
 }
 .selected {
     color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+.selected::after {
+    background: url(../svg/check-light.svg);
+    display: inline-block;
+    width: .35em;
+    height: .4em;
+    font-size: 3.5em;
+    /* position: absolute; */
+    right: 10px;
+    /* top: 15px; */
+    content: "";
+    /* border-width: 0 .26em .26em 0; */
+}
+
+/* TO BE REMOVED */
 h1 {
     font-family: sans-serif;
 }
