@@ -29,12 +29,6 @@
 .dropdown-toggle {
     background-color: #dae0e5;
 }
-.display::active {
-    outline: 1px solid blue;
-}
-.display::focus {
-    outline: 1px solid blue;
-}
 .display::after {
     background: url(../svg/angle-down-light.svg);
     display: inline-block;
