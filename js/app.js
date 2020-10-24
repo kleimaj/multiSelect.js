@@ -56,6 +56,7 @@ for (let i = 1; i < opt.length; i++) {
     a.setAttribute('tabindex','0');
     a.innerText=opt[i].innerText
     li.addEventListener('click', e => {
+        e.stopPropagation();
         if (selected.includes(e.target.innerText)) {
             selected.splice(selected.indexOf(e.target.innerText), 1);
             e.target.classList.remove('selected');
