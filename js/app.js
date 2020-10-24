@@ -1,8 +1,10 @@
 const updateContainer = (display, selected, opt) => {
     if (selected.length > 0) {
         display.value = selected.join(', ');
+        display.innerText = selected.join(', ');
     } else {
-        display.value = opt[0].innerText;
+        display.value = "";
+        display.innerText = opt[0].innerText;
     }
 }
 // console.log('🌴');
@@ -17,11 +19,12 @@ const container = document.createElement('div');
 container.classList.add('container')
 
 // create display
-const display = document.createElement('input');
+const display = document.createElement('div');
 display.classList.add('display');
-display.setAttribute('readonly','readonly');
+// display.setAttribute('readonly','readonly');
 // set innerText to default value
-display.value = opt[0].innerText
+display.innerText = opt[0].innerText
+display.value = ""
 // append display to container
 container.appendChild(display);
 // container.innerText = opt[0].innerText;
@@ -34,7 +37,7 @@ const dropdown = document.createElement('div');
 dropdown.classList.add('dropdown')
 // create ul
 const list = document.createElement('ul');
-list.classList.add('hidden');
+dropdown.classList.add('hidden');
 // iterate over options, skip first (placeholder)
 for (let i = 1; i < opt.length; i++) {
     // console.log(opt[i].innerText);
@@ -56,12 +59,12 @@ for (let i = 1; i < opt.length; i++) {
 }
 // add event listener to window
 document.addEventListener('click', e => {
-    list.classList.add('hidden');
+    dropdown.classList.add('hidden');
 })
 // add event listener to container to show / hide dropdown
 container.addEventListener('click', e => {
     e.stopPropagation();
-    list.classList.toggle('hidden');
+    dropdown.classList.toggle('hidden');
 })
 
 
@@ -71,3 +74,7 @@ container.appendChild(dropdown)
 dropdown.appendChild(list);
 // remove select field
 el.parentElement.removeChild(el);
+
+// const button = document.createElement('button');
+// button.style.backgroundImage="url(./svg/angle-down-light.svg)";
+// document.querySelector('#root').appendChild(button);

@@ -7,6 +7,31 @@
 .hidden {
     display: none;
 }
+.container {
+    min-width: 200px;
+}
+.display {
+    font-family: sans-serif;
+    border: 1px solid transparent;
+    margin: 15px;
+    background-color: #f8f9fa;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    border-radius: .25%;
+    position: relative;
+    /* width: 220px; */
+    text-align: left;
+    white-space: nowrap;
+}
+.dropdown {
+    font-family: sans-serif;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+}
 .selected {
     color: blue;
 }
