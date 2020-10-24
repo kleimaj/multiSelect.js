@@ -16,7 +16,8 @@
     overflow: hidden;
     width: 100%;
     font-family: sans-serif;
-    border: 1px solid transparent;
+    /* border: 1px solid transparent; */
+    border: 1px solid rgba(0,0,0,.15);
     margin: 15px;
     background-color: #f8f9fa;
     padding: .375rem .75rem;

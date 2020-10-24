@@ -21,7 +21,7 @@ container.classList.add('container')
 // create display
 const display = document.createElement('button');
 display.classList.add('display');
-// display.setAttribute('readonly','readonly');
+
 // set innerText to default value
 display.innerText = opt[0].innerText
 display.value = ""
