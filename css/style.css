@@ -50,6 +50,16 @@
     padding: .5rem 0;
     margin: .125rem 0 0;
     font-size: 1rem;
+    overflow-y: auto;
+}
+.dropdown ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 15px;
+    min-height: 100px;
 }
 .selected {
     color: blue;
