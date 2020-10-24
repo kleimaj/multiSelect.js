@@ -65,6 +65,9 @@
     padding: 15px;
     min-height: 100px;
 }
+.item{
+    cursor: pointer;
+}
 .selected {
     color: blue;
     display: flex;

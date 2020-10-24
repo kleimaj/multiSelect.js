@@ -51,11 +51,11 @@ for (let i = 1; i < opt.length; i++) {
     li.classList.add('item');
     // ACCESSIBILITY
     const a = document.createElement('a');
-    a.classList.add('anchor-item');
+    a.classList.add('item-anchor');
     a.setAttribute('role','option');
     a.setAttribute('tabindex','0');
     a.innerText=opt[i].innerText
-    a.addEventListener('click', e => {
+    li.addEventListener('click', e => {
         if (selected.includes(e.target.innerText)) {
             selected.splice(selected.indexOf(e.target.innerText), 1);
             e.target.classList.remove('selected');
