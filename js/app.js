@@ -49,8 +49,13 @@ for (let i = 1; i < opt.length; i++) {
     // console.log(opt[i].innerText);
     const li = document.createElement('li');
     li.classList.add('item');
-    li.innerText=opt[i].innerText
-    li.addEventListener('click', e => {
+    // ACCESSIBILITY
+    const a = document.createElement('a');
+    a.classList.add('anchor-item');
+    a.setAttribute('role','option');
+    a.setAttribute('tabindex','0');
+    a.innerText=opt[i].innerText
+    a.addEventListener('click', e => {
         if (selected.includes(e.target.innerText)) {
             selected.splice(selected.indexOf(e.target.innerText), 1);
             e.target.classList.remove('selected');
@@ -61,6 +66,7 @@ for (let i = 1; i < opt.length; i++) {
         // e.target.parentElement.removeChild(e.target);
         updateContainer(display, inner, selected, opt);
     })
+    li.appendChild(a);
     list.appendChild(li);
 }
 // add event listener to window
