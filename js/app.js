@@ -19,7 +19,7 @@ const container = document.createElement('div');
 container.classList.add('container')
 
 // create display
-const display = document.createElement('div');
+const display = document.createElement('button');
 display.classList.add('display');
 // display.setAttribute('readonly','readonly');
 // set innerText to default value

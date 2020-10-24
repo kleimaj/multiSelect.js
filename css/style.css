@@ -8,9 +8,13 @@
     display: none;
 }
 .container {
-    min-width: 200px;
+    /* min-width: 200px; */
+    width: 220px;
+    padding: .375rem .75rem;
 }
 .display {
+    overflow: hidden;
+    width: 100%;
     font-family: sans-serif;
     border: 1px solid transparent;
     margin: 15px;
@@ -20,17 +24,23 @@
     font-size: 1rem;
     border-radius: .25%;
     position: relative;
-    width: 220px;
     text-align: left;
     white-space: nowrap;
+}
+.display::active {
+    outline: 1px solid blue;
+}
+.display::focus {
+    outline: 1px solid blue;
 }
 .display::after {
     background: url(../svg/angle-down-light.svg);
     display: inline-block;
     width: 0;
     height: 0;
-    margin-left: .255em;
-    vertical-align: .255em;
+    position: absolute;
+    right: 10px;
+    top: 15px;
     content: "";
     border-top: .3em solid;
     border-right: .3em solid transparent;
