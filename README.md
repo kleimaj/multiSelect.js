@@ -56,6 +56,14 @@ npm i @kleimaj/multiselect.js
 
 <img src="https://i.imgur.com/TdH3u2P.png" alt="Example Implementation"/>
 
+* To get the values of the multi-select, you can do the following:
+```javascript
+const vals = document.querySelector('.multi').value;
+console.log(vals); // "Banana,Apples,..."
+// parse as an array
+vals.split(','); // [Bananas, Apples, ...]
+```
+
 ## Support
 
 For general questions about autoComplete.js, tweet at [@kleimaj].
