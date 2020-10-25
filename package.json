@@ -1,5 +1,5 @@
 {
-  "name": "multiselect.js",
+  "name": "@kleimaj/multiselect.js",
   "version": "1.0.0",
   "description": "Simple multi-select pure javascript library",
   "main": "js/app.js",
