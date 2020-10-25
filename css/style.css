@@ -20,7 +20,10 @@
     color: white;
 }
 .dark .selected {
-    color: deepskyblue;
+    color: #00EE00;
+}
+.dark .selected::after {
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
 }
 .display {
     overflow: hidden;
