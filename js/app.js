@@ -7,7 +7,33 @@ const updateContainer = (display,inner, selected, opt) => {
         inner.innerText = opt[0].innerText;
     }
 }
-// console.log('🌴');
+const multiSelect = () => {
+    document.querySelectorAll('.multi').forEach((el) => {
+        // array of options
+        const { options: opt } = el;
+        // create container
+        const container = document.createElement('div');
+        container.classList.add('container')
+
+        // create display
+        const display = document.createElement('button');
+        display.classList.add('display');
+
+        // create inner (displays the values)
+        const inner = document.createElement('div');
+        inner.classList.add('inner');
+
+        // set innerText to default value
+        // display.innerText = opt[0].innerText
+        inner.innerText = opt[0].innerText
+        display.value = ""
+        // append display to container
+        container.appendChild(display);
+        display.appendChild(inner);
+
+    })
+}
+
 const el = document.querySelector('.multi');
 // stores values of dropdown
 const selected = [];
@@ -37,7 +63,8 @@ display.appendChild(inner);
 // console.log(container);
 // insert container
 // el.insertAdjacentHTML('beforebegin', container);
-document.querySelector('#root').appendChild(container);
+// document.querySelector('#root').appendChild(container);
+el.parentNode.replaceChild(container, el);
 // create container
 const dropdown = document.createElement('div');
 dropdown.classList.add('dropdown')
