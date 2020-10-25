@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![\[Zero Dependencies\]()](https://img.shields.io/badge/Dependencies-0-blue.svg)
+![\[Size\]()](https://img.shields.io/badge/Size-7%20KB-green.svg)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/TarekRaafat/autoComplete.js)
 
 
