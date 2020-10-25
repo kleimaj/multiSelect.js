@@ -1,6 +1,6 @@
 const updateContainer = (display,inner, selected, opt) => {
     if (selected.length > 0) {
-        display.value = selected.join(', ');
+        display.value = selected.join(',');
         inner.innerText = selected.join(', ');
     } else {
         display.value = "";
