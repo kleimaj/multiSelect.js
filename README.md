@@ -37,10 +37,10 @@ multiSelect.js is a simple, pure vanilla Javascript library that's progressively
 <script src="https://cdn.jsdelivr.net/npm/@kleimaj/multiselect.js@1.0.0/js/app.js"></script>
 ```
 
--   <a href="https://www.npmjs.com/package/@tarekraafat/autocomplete.js">npm</a> install `(Node Package Manager)`
+-   <a href="https://www.npmjs.com/package/@kleimaj/multiselect.js">npm</a> install `(Node Package Manager)`
 
 ```shell
-npm i @tarekraafat/autocomplete.js
+npm i @kleimaj/multiselect.js
 ```
 
 ```html
