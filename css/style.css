@@ -7,7 +7,7 @@
 .hidden {
     display: none;
 }
-.container {
+.multi {
     width: 220px;
     padding: .375rem .75rem;
 }

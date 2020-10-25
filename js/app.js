@@ -1,9 +1,9 @@
-const updateContainer = (display,inner, selected, opt) => {
+const updateContainer = (container,inner, selected, opt) => {
     if (selected.length > 0) {
-        display.value = selected.join(',');
+        container.value = selected.join(',');
         inner.innerText = selected.join(', ');
     } else {
-        display.value = "";
+        container.value = "";
         inner.innerText = opt[0].innerText;
     }
 }
@@ -16,7 +16,7 @@ const multiSelect = () => {
         const { options: opt } = el;
         // create container
         const container = document.createElement('div');
-        container.classList.add('container')
+        container.classList.add('multi')
 
         // create display
         const display = document.createElement('button');
@@ -64,7 +64,7 @@ const multiSelect = () => {
                     e.target.classList.add('selected');
                 }
                 // e.target.parentElement.removeChild(e.target);
-                updateContainer(display, inner, map[idx], opt);
+                updateContainer(container, inner, map[idx], opt);
             })
             // li.appendChild(a);
             list.appendChild(li);
