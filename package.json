@@ -1,0 +1,26 @@
+{
+  "name": "multiselect.js",
+  "version": "1.0.0",
+  "description": "Simple multi-select pure javascript library",
+  "main": "js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kleimaj/multiSelect.js.git"
+  },
+  "keywords": [
+    "vanilla",
+    "javascript",
+    "multiselect",
+    "dropdown",
+    "select"
+  ],
+  "author": "Jacob Kleiman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kleimaj/multiSelect.js/issues"
+  },
+  "homepage": "https://github.com/kleimaj/multiSelect.js#readme"
+}
