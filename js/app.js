@@ -16,7 +16,17 @@ const multiSelect = () => {
         const { options: opt } = el;
         // create container
         const container = document.createElement('div');
-        container.classList.add('multi')
+        // carry over classes
+        el.classList.forEach(className => {
+            container.classList.add(className);
+        })
+        // carry over ids if exist
+        // container.id = el.id;
+        el.id ? container.id = el.id : '';
+        // carry over names
+        el.getAttribute('name') ? container.setAttribute('name', el.getAttribute('name')) : '';
+        // container.setAttribute('name', el.getAttribute('name') || '');
+        // container.classList.add('multi')
 
         // create display
         const display = document.createElement('button');
