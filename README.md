@@ -31,7 +31,7 @@ multiSelect.js is a simple, pure vanilla Javascript library that's progressively
 </select>
 ```
 
-* 1 It's essential that you name the class `multi` and set an initial option to `selected`, `disabled`, this will act as the placeholder value
+* It's essential that you name the class `multi` and set an initial option to `selected`, `disabled`, this will act as the placeholder value.
 
 ## Support
 
