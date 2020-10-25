@@ -91,7 +91,11 @@ const multiSelect = () => {
         })
     })
 }
-multiSelect()
+// https://stackoverflow.com/questions/799981/document-ready-equivalent-without-jquery
+document.addEventListener("DOMContentLoaded", function(event) { 
+    //do work
+    multiSelect()
+  });
 
 // const el = document.querySelector('.multi');
 // // stores values of dropdown
