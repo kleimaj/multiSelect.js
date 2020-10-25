@@ -50,11 +50,12 @@ for (let i = 1; i < opt.length; i++) {
     const li = document.createElement('li');
     li.classList.add('item');
     // ACCESSIBILITY
-    const a = document.createElement('a');
-    a.classList.add('item-anchor');
-    a.setAttribute('role','option');
-    a.setAttribute('tabindex','0');
-    a.innerText=opt[i].innerText
+    // const a = document.createElement('a');
+    // a.classList.add('item-anchor');
+    // a.setAttribute('role','option');
+    // a.setAttribute('tabindex','0');
+    // a.innerText=opt[i].innerText
+    li.innerText=opt[i].innerText;
     li.addEventListener('click', e => {
         e.stopPropagation();
         if (selected.includes(e.target.innerText)) {
@@ -67,7 +68,7 @@ for (let i = 1; i < opt.length; i++) {
         // e.target.parentElement.removeChild(e.target);
         updateContainer(display, inner, selected, opt);
     })
-    li.appendChild(a);
+    // li.appendChild(a);
     list.appendChild(li);
 }
 // add event listener to window
