@@ -11,6 +11,17 @@
     width: 220px;
     padding: .375rem .75rem;
 }
+.dark button {
+    background-color: black;
+    color: white;
+}
+.dark .dropdown {
+    background-color: black;
+    color: white;
+}
+.dark .selected {
+    color: deepskyblue;
+}
 .display {
     overflow: hidden;
     width: 100%;
