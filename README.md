@@ -21,7 +21,27 @@ multiSelect.js is a simple, pure vanilla Javascript library that's progressively
 -   Versatile
 
 
-## Example Implementation
+## Installation
+
+-   <img src="https://www.jsdelivr.com/img/logo@2x.png" alt="jsDelivr" width="100px">CDN
+
+`CSS`
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@kleimaj/multiselect.js@1.0.0/css/style.css">
+```
+
+`JS`
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@kleimaj/multiselect.js@1.0.0/js/app.js"></script>
+```
+
+-   <a href="https://www.npmjs.com/package/@tarekraafat/autocomplete.js">npm</a> install `(Node Package Manager)`
+
+```shell
+npm i @tarekraafat/autocomplete.js
+```
 
 ```html
 <select class="multi">
@@ -32,7 +52,9 @@ multiSelect.js is a simple, pure vanilla Javascript library that's progressively
 </select>
 ```
 
-* It's essential that you name the class `multi` and set an initial option to `selected`, `disabled`, this will act as the placeholder value.
+> It's essential that you name the class `multi` and set an initial option to `selected`, `disabled`, this will act as the placeholder value.
+
+<img src="https://i.imgur.com/TdH3u2P.png" alt="Example Implementation"/>
 
 ## Support
 
