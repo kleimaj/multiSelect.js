@@ -28,13 +28,13 @@ multiSelect.js is a simple, pure vanilla Javascript library that's progressively
 `CSS`
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@kleimaj/multiselect.js@1.0.0/css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@kleimaj/multiselect.js@1.0.0/css/style.min.css">
 ```
 
 `JS`
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@kleimaj/multiselect.js@1.0.0/js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@kleimaj/multiselect.js@1.0.0/js/multiselect.min.js"></script>
 ```
 
 ```html
