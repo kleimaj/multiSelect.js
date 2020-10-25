@@ -25,6 +25,7 @@ const multiSelect = () => {
         el.id ? container.id = el.id : '';
         // carry over names
         el.getAttribute('name') ? container.setAttribute('name', el.getAttribute('name')) : '';
+        el.getAttribute('onchange') ? container.setAttribute('onchange', el.getAttribute('onchange')) : '';
         // container.setAttribute('name', el.getAttribute('name') || '');
         // container.classList.add('multi')
 
