@@ -6,7 +6,10 @@ const updateContainer = (container,inner, selected, opt) => {
         container.value = "";
         inner.innerText = opt[0].innerText;
     }
-    container.onchange();
+    // container.dispatchEvent(new Event('change', { 'bubbles': true }));
+    // container.dispatchEvent(document.createEvent('HTMLEvents').initEvent('change', {bubbles: true, cancelable: false}))
+    // console.log(container)
+    container.dispatchEvent(new window.Event('change', {bubbles: true}));
 }
 const map = {};
 const multiSelect = () => {
@@ -104,7 +107,7 @@ const multiSelect = () => {
     })
 }
 // https://stackoverflow.com/questions/799981/document-ready-equivalent-without-jquery
-document.addEventListener("DOMContentLoaded", function(event) { 
-    //do work
-    multiSelect()
-  });
+// document.addEventListener("DOMContentLoaded", function(event) { 
+//     //do work
+//     multiSelect()
+//   });
