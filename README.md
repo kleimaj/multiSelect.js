@@ -46,6 +46,11 @@ multiSelect.js is a simple, pure vanilla Javascript library that's progressively
 </select>
 ```
 
+```javascript
+// invoke multiSelect()
+multiSelect();
+```
+
 > It's essential that you name the class `multi` and set an initial option to `selected`, `disabled`, this will act as the placeholder value.
 
 <img src="https://i.imgur.com/TdH3u2P.png" alt="Example Implementation"/>
