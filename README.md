@@ -7,7 +7,7 @@
 
 
 
-> Simple multi-select pure vanilla Javascript library. <a href="https://codepen.io/kleimaj/pen/mdEWVGb" target="\_blank">:rocket: Live Demo</a> **v1.0.6**
+> Simple multi-select pure vanilla Javascript library. <a href="https://codepen.io/kleimaj/pen/mdEWVGb" target="\_blank">:rocket: Live Demo</a> **v1.0.7**
 
 multiSelect.js is a simple, pure vanilla Javascript library that's progressively designed for easy integration for any type of project or system. The design was heavily influenced by that of the Bootstrap and Semantic-UI multi-select elements.
 
@@ -28,13 +28,13 @@ multiSelect.js is a simple, pure vanilla Javascript library that's progressively
 `CSS`
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@kleimaj/multiselect.js@1.0.6/css/style.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@kleimaj/multiselect.js@1.0.7/css/style.min.css">
 ```
 
 `JS`
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@kleimaj/multiselect.js@1.0.6/js/multiselect.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@kleimaj/multiselect.js@1.0.7/js/multiselect.min.js"></script>
 ```
 
 ```html
@@ -45,11 +45,11 @@ multiSelect.js is a simple, pure vanilla Javascript library that's progressively
         <option value="Peaches">Peaches</option>
 </select>
 ```
-
+<!-- 
 ```javascript
 // invoke multiSelect()
 multiSelect();
-```
+``` -->
 
 > It's essential that you name the class `multi` and set an initial option to `selected`, `disabled`, this will act as the placeholder value.
 

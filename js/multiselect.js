@@ -107,7 +107,7 @@ const multiSelect = () => {
     })
 }
 // https://stackoverflow.com/questions/799981/document-ready-equivalent-without-jquery
-// document.addEventListener("DOMContentLoaded", function(event) { 
-//     //do work
-//     multiSelect()
-//   });
+document.addEventListener("DOMContentLoaded", function(event) { 
+    //do work
+    multiSelect()
+  });
