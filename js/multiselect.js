@@ -6,6 +6,7 @@ const updateContainer = (container,inner, selected, opt) => {
         container.value = "";
         inner.innerText = opt[0].innerText;
     }
+    container.onchange();
 }
 const map = {};
 const multiSelect = () => {
