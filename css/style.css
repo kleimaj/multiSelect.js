@@ -1,4 +1,4 @@
-.hidden {
+.multi--hidden {
     display: none;
 }
 .multi {
@@ -19,7 +19,7 @@
 .dark .selected::after {
     filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
 }
-.display {
+.multi__display {
     overflow: hidden;
     width: 100%;
     font-family: sans-serif;
@@ -34,10 +34,10 @@
     text-align: left;
     white-space: nowrap;
 }
-.dropdown-toggle {
+.multi__dropdown-toggle {
     background-color: #dae0e5;
 }
-.display::after {
+.multi__display::after {
     background: url(../svg/angle-down-light.svg);
     display: inline-block;
     width: 0;
@@ -51,11 +51,11 @@
     border-bottom: 0;
     border-left: .3em solid transparent;
 }
-.inner {
+.multi__inner {
     width: 180px;
     overflow: hidden;
 }
-.dropdown {
+.multi__dropdown {
     font-family: sans-serif;
     border: 1px solid rgba(0,0,0,.15);
     border-radius: .25rem;
@@ -64,7 +64,7 @@
     font-size: 1rem;
     overflow-y: auto;
 }
-.dropdown ul {
+.multi__dropdown ul {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -73,16 +73,16 @@
     padding: 15px;
     min-height: 100px;
 }
-.item{
+.multi__li-item{
     cursor: pointer;
 }
-.selected {
+.multi__li-item--selected {
     color: blue;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.selected::after {
+.multi__li-item--selected::after {
     background: url(../svg/check-light.svg);
     display: inline-block;
     width: .35em;

@@ -35,11 +35,11 @@ const multiSelect = () => {
 
         // create display
         const display = document.createElement('button');
-        display.classList.add('display');
+        display.classList.add('multi__display');
 
         // create inner (displays the values)
         const inner = document.createElement('div');
-        inner.classList.add('inner');
+        inner.classList.add('multi__inner');
 
         // set innerText to default value
         // display.innerText = opt[0].innerText
@@ -54,14 +54,14 @@ const multiSelect = () => {
 
         // create dropdown
         const dropdown = document.createElement('div');
-        dropdown.classList.add('dropdown')
+        dropdown.classList.add('multi__dropdown')
         // create ul
         const list = document.createElement('ul');
-        dropdown.classList.add('hidden');
+        dropdown.classList.add('multi--hidden');
         // iterate over options, skip first (placeholder)
         for (let i = 1; i < opt.length; i++) {
             const li = document.createElement('li');
-            li.classList.add('item');
+            li.classList.add('multi__li-item');
             // ACCESSIBILITY
             // const a = document.createElement('a');
             // a.classList.add('item-anchor');
@@ -73,10 +73,10 @@ const multiSelect = () => {
                 e.stopPropagation();
                 if (map[idx].includes(e.target.innerText)) {
                     map[idx].splice(map[idx].indexOf(e.target.innerText), 1);
-                    e.target.classList.remove('selected');
+                    e.target.classList.remove('multi__li-item--selected');
                 }else {
                     map[idx].push(e.target.innerText);
-                    e.target.classList.add('selected');
+                    e.target.classList.add('multi__li-item--selected');
                 }
                 // e.target.parentElement.removeChild(e.target);
                 updateContainer(container, inner, map[idx], opt);
@@ -87,8 +87,8 @@ const multiSelect = () => {
         // add event listener to container to show / hide dropdown
         container.addEventListener('click', e => {
             e.stopPropagation();
-            display.classList.toggle('dropdown-toggle');
-            dropdown.classList.toggle('hidden');
+            display.classList.toggle('multi__dropdown--toggle');
+            dropdown.classList.toggle('multi--hidden');
         })
         // append dropdown to container
         container.appendChild(dropdown)
@@ -97,12 +97,12 @@ const multiSelect = () => {
     })
     // add event listener to window
     document.addEventListener('click', e => {
-        document.querySelectorAll('.display').forEach((display) => {
-            display.classList.remove('dropdown-toggle');
+        document.querySelectorAll('.multi__display').forEach((display) => {
+            display.classList.remove('multi__dropdown--toggle');
         })
 
-        document.querySelectorAll('.dropdown').forEach((dropdown) => {
-            dropdown.classList.add('hidden');
+        document.querySelectorAll('.multi__dropdown').forEach((dropdown) => {
+            dropdown.classList.add('multi--hidden');
         })
     })
 }
