@@ -6,24 +6,19 @@ const updateContainer = (container, inner, selected, opt) => {
     container.value = '';
     inner.innerText = opt[0].innerText;
   }
-  // container.dispatchEvent(new Event('change', { 'bubbles': true }));
-  // container.dispatchEvent(document.createEvent('HTMLEvents').initEvent('change', {bubbles: true, cancelable: false}))
-  // console.log(container)
   container.dispatchEvent(new window.Event('change', { bubbles: true }));
 };
 const buttonToggle = (display, dropdown) => {
   display.classList.toggle('multi__dropdown--toggle');
   dropdown.classList.toggle('multi--hidden');
-}
+};
 const map = {};
 let multi_idx = 0;
 const multiSelect = () => {
   Array.from(document.querySelectorAll('.multi'))
-    .filter(
-      (multi) => {
-        return multi.getAttribute('data-multiselect-initialized') === null
-      }
-    )
+    .filter((multi) => {
+      return multi.getAttribute('data-multiselect-initialized') === null;
+    })
     .forEach((el) => {
       // stores values of dropdown
       map[multi_idx] = [];
@@ -92,10 +87,7 @@ const multiSelect = () => {
         li.addEventListener('click', (e) => {
           e.stopPropagation();
           if (map[key].includes(e.target.innerText)) {
-            map[key].splice(
-              map[key].indexOf(e.target.innerText),
-              1,
-            );
+            map[key].splice(map[key].indexOf(e.target.innerText), 1);
             e.target.classList.remove('multi__li-item--selected');
           } else {
             map[key].push(e.target.innerText);
