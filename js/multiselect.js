@@ -11,16 +11,20 @@ const updateContainer = (container, inner, selected, opt) => {
   // console.log(container)
   container.dispatchEvent(new window.Event('change', { bubbles: true }));
 };
-const listItemEventListener = () => {};
+const buttonToggle = (display, dropdown) => {
+  display.classList.toggle('multi__dropdown--toggle');
+  dropdown.classList.toggle('multi--hidden');
+}
 const map = {};
 let multi_idx = 0;
 const multiSelect = () => {
   Array.from(document.querySelectorAll('.multi'))
     .filter(
-      (multi) => multi.getAttribute('data-multiselect-initialized') === null,
+      (multi) => {
+        return multi.getAttribute('data-multiselect-initialized') === null
+      }
     )
     .forEach((el) => {
-      console.log(el);
       // stores values of dropdown
       map[multi_idx] = [];
       // array of options
@@ -34,6 +38,8 @@ const multiSelect = () => {
 
       // Add data-multiselect-initialized attribute
       container.setAttribute('data-multiselect-initialized', true);
+      container.setAttribute('key', multi_idx);
+      const key = multi_idx;
       // carry over ids if exist
       // container.id = el.id;
       el.id ? (container.id = el.id) : '';
@@ -85,18 +91,18 @@ const multiSelect = () => {
         li.innerText = opt[i].innerText;
         li.addEventListener('click', (e) => {
           e.stopPropagation();
-          if (map[multi_idx].includes(e.target.innerText)) {
-            map[multi_idx].splice(
-              map[multi_idx].indexOf(e.target.innerText),
+          if (map[key].includes(e.target.innerText)) {
+            map[key].splice(
+              map[key].indexOf(e.target.innerText),
               1,
             );
             e.target.classList.remove('multi__li-item--selected');
           } else {
-            map[multi_idx].push(e.target.innerText);
+            map[key].push(e.target.innerText);
             e.target.classList.add('multi__li-item--selected');
           }
           // e.target.parentElement.removeChild(e.target);
-          updateContainer(container, inner, map[multi_idx], opt);
+          updateContainer(container, inner, map[key], opt);
         });
         // li.appendChild(a);
         list.appendChild(li);
@@ -104,8 +110,9 @@ const multiSelect = () => {
       // add event listener to container to show / hide dropdown
       container.addEventListener('click', (e) => {
         e.stopPropagation();
-        display.classList.toggle('multi__dropdown--toggle');
-        dropdown.classList.toggle('multi--hidden');
+        buttonToggle(display, dropdown);
+        // display.classList.toggle('multi__dropdown--toggle');
+        // dropdown.classList.toggle('multi--hidden');
       });
       // append dropdown to container
       container.appendChild(dropdown);
@@ -136,4 +143,18 @@ window.multiSelect = {
   refresh() {
     multiSelect();
   },
+  // addMulti() {
+  //   const root = document.querySelector('#root');
+  //   const select = document.createElement('select');
+  //   select.classList.add('multi');
+  //   const option = document.createElement('option');
+  //   option.selected = true;
+  //   option.disabled = true;
+  //   option.innerHTML="Default"
+  //   select.appendChild(option);
+  //   const option_two = document.createElement('option');
+  //   option_two.innerHTML="Banana";
+  //   select.appendChild(option_two);
+  //   root.appendChild(select);
+  // }
 };

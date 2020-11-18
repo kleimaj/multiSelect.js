@@ -45,11 +45,6 @@ multiSelect.js is a simple, pure vanilla Javascript library that's progressively
         <option value="Peaches">Peaches</option>
 </select>
 ```
-<!-- 
-```javascript
-// invoke multiSelect()
-multiSelect();
-``` -->
 
 > It's essential that you name the class `multi` and set an initial option to `selected`, `disabled`, this will act as the placeholder value.
 
@@ -62,6 +57,12 @@ console.log(vals); // "Banana,Apples,..."
 // parse as an array
 vals.split(','); // [Bananas, Apples, ...]
 ```
+
+### Reinitialization
+
+* By default, multiSelect elements will be initialized on page ready. However if you're using an async script, you may add multis after the page load by invoking `multiSelect()` or `window.multiSelect.refresh()`. This will initialize any new `.multi` elements that have not yet been created.
+
+Special thanks to Hirbod for bringing this Issue (#1) to my attention.
 
 ## Support
 
