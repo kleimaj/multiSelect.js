@@ -52,7 +52,6 @@
     border-left: .3em solid transparent;
 }
 .multi__inner {
-    width: 180px;
     overflow: hidden;
 }
 .multi__dropdown {
